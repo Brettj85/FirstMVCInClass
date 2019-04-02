@@ -13,6 +13,10 @@ namespace FirstProject.Controllers
             var car = new Car();
             car.Vin = 123456;
             car.Color = "Red";
+            var plane = new Plane();
+            car.Vin = 123456;
+            car.Color = "Red";
+
             return View(car); //views/vehicle/index <----- Car (model)
         }
     }
@@ -21,5 +25,15 @@ namespace FirstProject.Controllers
     {
         public int Vin { get; set; }
         public string Color { get; set; }
+    }
+    public class Plane
+    {
+        public int Vin { get; set; }
+        public string Color { get; set; }
+    }
+
+    public class CarPlaneViewModel
+    {
+        public Car car;
     }
 }
